@@ -309,7 +309,7 @@ const Home = () => {
                                 موظفة حكومية حتى الآن في المدارس الإعدادية للأطفال من سن 3 إلى 6 سنوات ، و في نفس الوقت مستثمرة ومسوقة لشركة الامارات العربية المتحدة. هدفنا اليوم هو إخراج الناس من طريقة حياتهم الصعبة إلى انطلاقة جديدة في التكنولوجيا الجديدة والرقمية مع شركة سفير وزينك.
                             </p>
                         </div>
-                        <div class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-[url('../../public/Home/zaid.jpeg')] bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`} />
+                        <div style={{ backgroundImage: `url('/public/Home/zaid.jpeg')` }} class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`} />
                     </div>
                 </section>
                 <section ref={social} id="Contact" class="col items-center md:gap-[6.57030223390276vw] gap-[15.458937198067632vw]">

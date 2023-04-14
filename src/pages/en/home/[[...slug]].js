@@ -313,7 +313,7 @@ const Home = () => {
                                 Our goal today is to take people out of their difficult way of life into a new breakthrough into the digital and technological ecosystem provided by ZENIQ SAFIR.
                             </p>
                         </div>
-                        <div class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-[url('../../public/Home/zaid.jpeg')] bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`}>
+                        <div style={{ backgroundImage: `url('/public/Home/zaid.jpeg')` }} class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`}>
                         </div>
                     </div>
                 </section>
