@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
 
+import sidiImage from '/public/Invest/sidiIm.jpg'
 import aircraft from '/public/Invest/aircraft.png'
 import tdrone from '/public/Invest/tdrone.png'
 import sidi from '/public/Invest/sidi.png'
@@ -138,7 +139,7 @@ const Invest = () => {
                     </div>
                 </section>
                 <section id="Sidi" class="w-full col md:gap-[8.21287779237845vw] ">
-                    <div ref={sidiIm} style={{ backgroundImage: `url('/public/Invest/sidiIm.jpg')` }} class="sidiIm" >
+                    <div ref={sidiIm} style={{ backgroundImage: `url(${sidiImage.src})` }} class="sidiIm" >
                         <svg class="absolute w-full top-0 z-[1]" viewBox="1 0 1300 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.5 0H1302V71.456C781.93 71.456 114.162 97.44 0.5 203V0Z" fill="white" />
                         </svg>

@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react"
 import { useInView } from 'react-intersection-observer'
 import Image from "next/image"
+
 import home from '/public/Home/home.png'
 import coin from '/public/Home/coin.png'
 import tokenization from '/public/Home/tokenisation ZENIQ.png'
+import zaid from '/public/Home/zaid.jpeg'
 import hub from '/public/Home/hub.svg'
 
 
@@ -313,7 +315,7 @@ const Home = () => {
                                 Our goal today is to take people out of their difficult way of life into a new breakthrough into the digital and technological ecosystem provided by ZENIQ SAFIR.
                             </p>
                         </div>
-                        <div style={{ backgroundImage: `url('/public/Home/zaid.jpeg')` }} class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`}>
+                        <div style={{ backgroundImage: `url(${zaid.src})` }} class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`}>
                         </div>
                     </div>
                 </section>

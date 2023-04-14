@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react"
 import { useInView } from 'react-intersection-observer'
 import Image from "next/image"
+
 import home from '/public/Home/home.png'
 import coin from '/public/Home/coin.png'
+import zaid from '/public/Home/zaid.jpeg'
 import tokenization from '/public/Home/tokenisation ZENIQ.png'
 import hub from '/public/Home/hub.svg'
 
@@ -309,7 +311,7 @@ const Home = () => {
                                 موظفة حكومية حتى الآن في المدارس الإعدادية للأطفال من سن 3 إلى 6 سنوات ، و في نفس الوقت مستثمرة ومسوقة لشركة الامارات العربية المتحدة. هدفنا اليوم هو إخراج الناس من طريقة حياتهم الصعبة إلى انطلاقة جديدة في التكنولوجيا الجديدة والرقمية مع شركة سفير وزينك.
                             </p>
                         </div>
-                        <div style={{ backgroundImage: `url('/public/Home/zaid.jpeg')` }} class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`} />
+                        <div style={{ backgroundImage: `url(${zaid.src})` }} class={`w-full ${(currentLeft === smLeft) ? 'hiddenDown' : ''} md:hiddenLeft ${(meVisible && (currentLeft === smLeft)) ? 'showY' : ''} ${meVisible ? 'md:showX' : ''} md:w-[31.60315374vw] aspect-square bg-cover border-newBlack border-[0.19710906vw] rounded-[1.314060446vw]`} />
                     </div>
                 </section>
                 <section ref={social} id="Contact" class="col items-center md:gap-[6.57030223390276vw] gap-[15.458937198067632vw]">
