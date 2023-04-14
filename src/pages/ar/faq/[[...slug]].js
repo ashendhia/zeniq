@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import empty from '../../../public/FAQ/empty.png'
+import empty from '/public/FAQ/empty.png'
 
 const Faq = () => {
     const [youtubeLink, setYoutubeLink] = useState({
