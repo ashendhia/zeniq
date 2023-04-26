@@ -196,6 +196,12 @@ export default function App({ Component, pageProps }) {
 
     window.innerWidth >= 768 ? setNavOptions(true) : setNavOptions(false);
 
+    const script = document.createElement('script')
+
+    script.src = "https://safir.com/backend/banner/5d3d280e-4dc4-4cff-be3f-d1f38e912a5d"
+    script.async = true
+    document.body.appendChild(script)
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
