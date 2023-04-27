@@ -461,10 +461,10 @@
   }
 
   .bannerSmall {
-    @apply h-[6.57030223390276vw];
+    @apply h-[24.154589371980677vw] md:h-[6.57030223390276vw];
   }
 
   .banner {
-    @apply h-[34vw];
+    @apply h-[123vw] md:h-[34vw];
   }
 }

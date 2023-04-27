@@ -367,7 +367,7 @@ export default function App({ Component, pageProps }) {
         </div>
       </header>
       <Component {...pageProps} />
-      <footer class=" relative w-full mt-[15.458937198067632vw] md:mt-[9.526938239159001vw] col justify-center items-center bg-newGrey gap-[3.942181340341656vw]">
+      <footer class=" relative w-full mt-[15.458937198067632vw] md:mt-[9.526938239159001vw] pt-[15.458937198067632vw] pb-[7vw] md:py-[3.942181340341656vw] col justify-center items-center bg-newGrey gap-[15.458937198067632vw] md:gap-[3.942181340341656vw]">
         <div class="col gap-[15.458937198067632vw] md:row md:gap-[11.235216819973719vw] items-center md:items-start">
           <div class="col items-center gap-[7.729468599033816vw] md:gap-[2.102496714848883vw]">
             <h2 class="getStarted">
@@ -569,9 +569,9 @@ export default function App({ Component, pageProps }) {
             </div>
           </div>
         </div>
-        <div ref={ref} style={{ backgroundImage: "url(https://safir.com/backoffice/bannerfiles/background_border_lg.png)" }} className="relative w-1/2 bannerSmall bg-cover">
+        <div ref={ref} style={{ backgroundImage: "url(https://safir.com/backoffice/bannerfiles/background_border_lg.png)" }} className="relative w-full md:w-1/2 bannerSmall bg-cover">
           <div>
-            <img src="https://safir.com/backoffice/bannerfiles/Pfeil_runter.svg" alt className=" cursor-pointer absolute w-[1.971090670170828vw] right-[1.971090670170828vw] top-[1.971090670170828vw] z-[2] transition all duration-300 " onClick={(e) => {
+            <img src="https://safir.com/backoffice/bannerfiles/Pfeil_runter.svg" alt className=" cursor-pointer absolute w-[7.246376811594203vw] md:w-[1.971090670170828vw] md:right-[1.971090670170828vw] right-[7.246376811594203vw] top-[7.246376811594203vw] md:top-[1.971090670170828vw] z-[2] transition all duration-300 " onClick={(e) => {
               if (rotate === 180) {
                 setRotate(0)
                 ref.current.classList.remove("banner")
@@ -587,7 +587,7 @@ export default function App({ Component, pageProps }) {
 
             <div className="w-full h-[3.28515111695138vw] absolute top-0 left-0 z-[1]" />
           </div>
-          <iframe src="https://safir.com/backend/banner-markup/5d3d280e-4dc4-4cff-be3f-d1f38e912a5d" className="font-sans w-full h-full" ></iframe>
+          <iframe src="https://safir.com/backend/banner-markup/5d3d280e-4dc4-4cff-be3f-d1f38e912a5d" className="w-full h-full" ></iframe>
         </div>
       </footer>
     </div>
