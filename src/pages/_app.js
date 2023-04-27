@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from 'next/link';
 import '../styles/globals.css'
 
@@ -142,6 +142,7 @@ export default function App({ Component, pageProps }) {
 
   }
 
+  const [rotate, setRotate] = useState(180)
   const [viewPort, setViewPort] = useState(1522)
   const [lang, setLang] = useState("")
   const [langRoute, setLangRoute] = useState("")
@@ -149,6 +150,7 @@ export default function App({ Component, pageProps }) {
   const [navBar, setNavBar] = useState(null)
   const [footer, setFooter] = useState(null)
   const [isFixed, setIsFixed] = useState(false);
+  const ref = useRef(null);
 
 
   const [navOptions, setNavOptions] = useState(false)
@@ -195,12 +197,6 @@ export default function App({ Component, pageProps }) {
     window.innerWidth >= 768 ? setViewPort(1522) : setViewPort(414);
 
     window.innerWidth >= 768 ? setNavOptions(true) : setNavOptions(false);
-
-    const script = document.createElement('script')
-
-    script.src = "https://safir.com/backend/banner/5d3d280e-4dc4-4cff-be3f-d1f38e912a5d"
-    script.async = true
-    document.body.appendChild(script)
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -297,7 +293,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       <header
-        class={` ${((viewPort === 414) && navOptions) || isFixed ? 'navBg' : 'bg-none'} ${viewPort === 1522 ? `md:pr-[${langList * 100 / viewPort}vw]` : `pr-[6.763285024154589vw]`} ${navOptions ? 'pb-[11.11111111111111vw]' : 'pb-[8.695652173913043vw]'} duration-[400ms] ease-in-out pt-[6.763285024154589vw] ${isFixed ? 'navTop md:pb-[1.314060446780552vw]' : 'nav0 md:pb-[2.8252299605781865vw]'}  md:pt-0 md:mt-0 col md:row items-center md:items-start justify-between w-full pl-[6.763285024154589vw] md:pl-[6.964520367936925vw] z-[2]`}>
+        class={` ${((viewPort === 414) && navOptions) || isFixed ? 'navBg' : 'bg-none'} ${viewPort === 1522 ? `md:pr-[${langList * 100 / viewPort}vw]` : `pr-[6.763285024154589vw]`} ${navOptions ? 'pb-[11.11111111111111vw]' : 'pb-[8.695652173913043vw]'} pt-[6.763285024154589vw] fixed ${isFixed ? 'md:pb-[1.314060446780552vw]' : 'md:pb-[2.8252299605781865vw]'}  md:pt-0 md:mt-0 col md:row items-center md:items-start justify-between w-full pl-[6.763285024154589vw] md:pl-[6.964520367936925vw] z-[2] transition-all duration-500 ease-in-out`}>
         <div class="row w-full justify-between">
           <Link href={`${langRoute}/home`} onClick={() => {
             setCurrentRoute(`${langRoute}/home`)
@@ -371,7 +367,7 @@ export default function App({ Component, pageProps }) {
         </div>
       </header>
       <Component {...pageProps} />
-      <footer class="w-full mt-[15.458937198067632vw] md:mt-[9.526938239159001vw] grid items-center justify-center aspect-[0.5] md:aspect-[3.5] bg-newGrey">
+      <footer class=" relative w-full mt-[15.458937198067632vw] md:mt-[9.526938239159001vw] col justify-center items-center bg-newGrey gap-[3.942181340341656vw]">
         <div class="col gap-[15.458937198067632vw] md:row md:gap-[11.235216819973719vw] items-center md:items-start">
           <div class="col items-center gap-[7.729468599033816vw] md:gap-[2.102496714848883vw]">
             <h2 class="getStarted">
@@ -572,6 +568,26 @@ export default function App({ Component, pageProps }) {
               </Link>
             </div>
           </div>
+        </div>
+        <div ref={ref} style={{ backgroundImage: "url(https://safir.com/backoffice/bannerfiles/background_border_lg.png)" }} className="relative w-1/2 bannerSmall bg-cover">
+          <div>
+            <img src="https://safir.com/backoffice/bannerfiles/Pfeil_runter.svg" alt className=" cursor-pointer absolute w-[1.971090670170828vw] right-[1.971090670170828vw] top-[1.971090670170828vw] z-[2] transition all duration-300 " onClick={(e) => {
+              if (rotate === 180) {
+                setRotate(0)
+                ref.current.classList.remove("banner")
+                ref.current.classList.add("bannerSmall")
+                e.target.classList.remove("rotate-180")
+              } else {
+                setRotate(180)
+                ref.current.classList.remove("bannerSmall")
+                ref.current.classList.add("banner")
+                e.target.classList.add("rotate-180")
+              }
+            }} />
+
+            <div className="w-full h-[3.28515111695138vw] absolute top-0 left-0 z-[1]" />
+          </div>
+          <iframe src="https://safir.com/backend/banner-markup/5d3d280e-4dc4-4cff-be3f-d1f38e912a5d" className="font-sans w-full h-full" ></iframe>
         </div>
       </footer>
     </div>

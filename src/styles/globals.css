@@ -459,4 +459,12 @@
   .footerLink {
     @apply text-[3.6231884057971016vw] leading-[4.3478260869565215VW] md:text-[0.985545335085414vw] md:leading-[1.1826544021024967vw] text-white font-normal;
   }
+
+  .bannerSmall {
+    @apply h-[6.57030223390276vw];
+  }
+
+  .banner {
+    @apply h-[34vw];
+  }
 }
