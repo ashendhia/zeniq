@@ -293,7 +293,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       <header
-        class={` ${((viewPort === 414) && navOptions) || isFixed ? 'navBg' : 'bg-none'} ${viewPort === 1522 ? `md:pr-[${langList * 100 / viewPort}vw]` : `pr-[6.763285024154589vw]`} ${navOptions ? 'pb-[11.11111111111111vw]' : 'pb-[8.695652173913043vw]'} pt-[6.763285024154589vw] fixed ${isFixed ? 'md:pb-[1.314060446780552vw]' : 'md:pb-[2.8252299605781865vw]'}  md:pt-0 md:mt-0 col md:row items-center md:items-start justify-between w-full pl-[6.763285024154589vw] md:pl-[6.964520367936925vw] z-[2] transition-all duration-500 ease-in-out`}>
+        class={` ${((viewPort === 414) && navOptions) || isFixed ? 'navBg' : 'bg-none'} ${viewPort === 1522 ? `md:pr-[${langList * 100 / viewPort}vw]` : `pr-[6.763285024154589vw]`} ${navOptions ? 'pb-[11.11111111111111vw]' : 'pb-[8.695652173913043vw]'} pt-[6.763285024154589vw] fixed ${isFixed ? 'md:pb-[1.314060446780552vw]' : 'md:pb-[2.8252299605781865vw]'}  md:pt-0 md:mt-0 col md:row items-center md:items-start justify-between w-full pl-[6.763285024154589vw] md:pl-[6.964520367936925vw] z-[3] transition-all duration-500 ease-in-out`}>
         <div class="row w-full justify-between">
           <Link href={`${langRoute}/home`} onClick={() => {
             setCurrentRoute(`${langRoute}/home`)
