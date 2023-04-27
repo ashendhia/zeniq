@@ -461,10 +461,10 @@
   }
 
   .bannerSmall {
-    @apply aspect-[7.28];
+    @apply h-[19.32367149758454vw] md:h-[6.57030223390276vw];
   }
 
   .banner {
-    @apply aspect-[1.4302554027504912];
+    @apply h-[123vw] md:h-[34vw];
   }
 }
