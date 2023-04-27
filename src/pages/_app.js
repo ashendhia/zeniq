@@ -142,7 +142,7 @@ export default function App({ Component, pageProps }) {
 
   }
 
-  const [rotate, setRotate] = useState(180)
+  const [rotate, setRotate] = useState(0)
   const [viewPort, setViewPort] = useState(1522)
   const [lang, setLang] = useState("")
   const [langRoute, setLangRoute] = useState("")
@@ -584,7 +584,6 @@ export default function App({ Component, pageProps }) {
                 e.target.classList.add("rotate-180")
               }
             }} />
-
             <div className="w-full h-[3.28515111695138vw] absolute top-0 left-0 z-[1]" />
           </div>
           <iframe src="https://safir.com/backend/banner-markup/5d3d280e-4dc4-4cff-be3f-d1f38e912a5d" className="w-full h-full" ></iframe>
